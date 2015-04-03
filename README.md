@@ -1,5 +1,5 @@
 # Collapsible Menu header
-Proof of concept for a veri simple top navigation. BW colors were spiced-up just for fun.
+Proof of concept for a veri simple top navigation with a smooth CSS animation (transition). BW colors were spiced-up just for fun.
 
 About
 -----
