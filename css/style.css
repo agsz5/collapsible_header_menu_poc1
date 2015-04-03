@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+*:focus {
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #009ec9;
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.animate, header .content nav ul li a {
+  -webkit-transition: all 0.25s;
+          transition: all 0.25s;
+}
+
+.animate-ease, header .content, header .handle .bars .bar {
+  -webkit-transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+          transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+header .content {
+  background-color: #fff;
+  width: 100%;
+  height: 90px;
+  line-height: 80px;
+  padding-top: 10px;
+  position: absolute;
+  top: -90px;
+  left: 0;
+  z-index: 5;
+}
+header .content nav ul {
+  list-style-type: none;
+  font-size: 0;
+}
+header .content nav ul li {
+  display: inline-block;
+  margin-right: 25px;
+}
+header .content nav ul li a {
+  font-weight: 600;
+  font-size: 16px;
+  color: #666;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+header .content nav ul li a:hover {
+  color: #2980b9;
+}
+header .handle {
+  background-color: #fff;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+header .handle .bars {
+  width: 40px;
+  height: 26px;
+  position: absolute;
+  top: 27px;
+  left: 20px;
+}
+header .handle .bars .bar {
+  background-color: #666;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+}
+header .handle .bars .bar:nth-child(1) {
+  top: 0;
+}
+header .handle .bars .bar:nth-child(2) {
+  top: 12px;
+}
+header .handle .bars .bar:nth-child(3) {
+  bottom: 0;
+}
+header .handle:hover .bars .bar {
+  opacity: .7;
+}
+header.expanded .content {
+  top: -10px;
+}
+header.expanded .handle .bars .bar:nth-child(1) {
+  top: 12px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+header.expanded .handle .bars .bar:nth-child(2) {
+  opacity: 0;
+}
+header.expanded .handle .bars .bar:nth-child(3) {
+  bottom: 12px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
